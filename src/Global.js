@@ -1,1 +1,1 @@
-export const API = 'https://student-teacher-admin-dashboard-app.onrender.com';
+export const API = 'https://be-bqer.onrender.com/';

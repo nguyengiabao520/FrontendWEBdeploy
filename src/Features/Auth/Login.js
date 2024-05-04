@@ -64,6 +64,7 @@ const Login = () => {
     validationSchema: LoginValidationSchema,
     onSubmit: (values) => {
       // console.log('onLogin', values);
+      console.log(values);
       loginUser(values); // Call updateStaff function to handle form submission
     },
   });

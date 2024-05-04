@@ -84,6 +84,7 @@ const SignUp = () => {
     },
     validationSchema: SignUpValidationSchema,
     onSubmit: (values) => {
+      console.log(values);
       // console.log('onSignup', values);
       signupUser(values); // Call signupUser function to handle form submission
     },
