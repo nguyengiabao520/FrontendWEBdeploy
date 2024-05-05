@@ -71,18 +71,18 @@ export const ViewStaffInfo = ({ data }) => {
   };
 
   // For Searching through Data
-  const filteredData = data?.filter((item) => {
-    const term = searchTerm ?? '';
-    if (term.trim() === '') return true;
-    return (
-      (item.id && item.id.toLowerCase().includes(term.toLowerCase() || '')) ||
-      (item.subject &&
-        item.subject.toLowerCase().includes(term.toLowerCase() || '')) ||
-      (item.name &&
-        item.name.toLowerCase().includes(term.toLowerCase() || '')) ||
-      (item.contactInfo && item.contactInfo.includes(term || ''))
-    );
-  });
+  // const filteredData = data?.filter((item) => {
+  //   const term = searchTerm ?? '';
+  //   if (term.trim() === '') return true;
+  //   return (
+  //     (item.id && item.id.toLowerCase().includes(term.toLowerCase() || '')) ||
+  //     (item.subject &&
+  //       item.subject.toLowerCase().includes(term.toLowerCase() || '')) ||
+  //     (item.name &&
+  //       item.name.toLowerCase().includes(term.toLowerCase() || '')) ||
+  //     (item.contactInfo && item.contactInfo.includes(term || ''))
+  //   );
+  // });
 
   // Column for Data-Grid
   const columns = [
@@ -145,7 +145,7 @@ export const ViewStaffInfo = ({ data }) => {
         <>
           <DataGrid
             style={{ padding: '20px' }}
-            rows={filteredData || []}
+            rows={data || []}
             columns={columns}
             rowsPerPageOptions={[5, 10, 20]}
             autoHeight
